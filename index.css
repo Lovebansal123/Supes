@@ -1,0 +1,1291 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montagu Slab', serif;
+    scroll-behavior: smooth;
+}
+body{
+    background: #000;
+    position: relative;
+}
+
+
+
+
+#loader_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #3586ff;
+    align-items: center;
+}
+.loader_of_image{
+    width: 250px;
+    margin: 20px;
+}
+.loader_of_h2{
+    font-size: 6rem;
+    letter-spacing: 5px;
+    color: white;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004007d);
+   line-height: 0.70em;
+   outline: none;
+   text-shadow: 0 0 10px #03bcf4,
+   0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4, 0 0 160px #03bcf4;
+}
+.animate__animated.animate__bounce {
+    --animate-duration: 4s;
+  }
+
+
+
+/* navbar  */
+
+
+
+.navbar-mine{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    background: rgba(20, 20, 20, 0.5) !important;
+    padding: 10px 0rem;
+    color: white;
+}
+.logo-auto h2{
+    color:white;
+    transition: all 0.5s ease;
+}
+
+
+.logo-auto{
+    display: flex;
+    align-items: center;
+    padding: 0 0.4rem;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.logo-auto a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo-auto{
+    position: relative;
+}
+
+.logo-auto::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 0%;
+    right: 100%;
+    bottom: -2px;
+    background: #3586ff;
+    transition: all 0.5s ease;
+}
+.logo-auto:hover h2{
+    color: #3586ff;
+    transform: translateY(-4px);
+}
+.logo-auto:hover::after{
+    width: 100%;
+    right:0;
+}
+
+.elements{
+    display: flex;
+    margin-right: 45px;
+}
+.inner-nav-left{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+.nav-mid{
+    text-transform: uppercase;
+    color: #3586ff;
+    font-weight: bold;
+    margin-left:45px;
+}
+@media(max-width: 585px){
+    .nav-mid{
+        margin-right: 170px;
+    }
+}
+.nav-opt{
+    font-size: 0.7rem;
+    padding: 5px;
+}
+.nav-right{
+    width: 30%;
+    margin: auto 10rem;
+}
+.nav-opt a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    transition: all 0.5s ease;
+}
+.search-opt{
+    display: flex;
+    padding: 6px;
+    border-radius: 3px;
+    width: 100%;
+    align-items: center;
+    background: #3586ff;
+    color: white;
+}
+.search-opt input{
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    width: 100%;
+}
+.hamburger-open,.hamburger-close{
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    transition: all 1s ease;
+}
+#nav-left-mid-com{
+    display: none;
+}
+#supes-left{
+    display: none;
+}
+
+.hamburger-close {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    
+}
+::placeholder {
+    color: white;
+  }
+@media(max-width:950px){
+    .elements{
+        margin-right: 0px;
+    }
+    .nav-mid{
+        margin-left: 0px;
+    }
+    .navbar-mine{
+        
+    justify-content: center;
+    }
+    .inner-nav-left{
+        flex-direction: column;
+    }
+    .nav-mid{
+        
+    margin-right: 360px;
+    }
+    .nav-left{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        transition: top 1s ease;
+        display: none;
+         width: 100%;
+    }
+    .hamburger-close,.hamburger-open{
+        display: flex;
+    }
+    .nav-right{
+        margin: 0 6rem;
+    }
+}
+@media(max-width:600px){
+    .nav-right{
+        margin: 0 4rem;
+    }
+}
+@media(max-width:500px){
+  .navbar-mine{
+      justify-content: space-between;
+  }
+  .nav-right{
+    margin: 0;
+}
+.hamburger-open{
+    margin-right: 34px;
+
+}
+.hamburger-close{
+    top: 10px;
+    right: 9px;
+}
+}
+
+
+/* ********* */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Slider  */
+
+#next-btn,
+#prev-btn {
+  padding:0px;
+  background-color:transparent;
+  color: white;
+ 
+}
+#prev-btn{
+    left: 0px;
+}
+#next-btn{
+    right: 0px;
+}
+@media(max-width:480px){
+    #prev-btn{
+        left: 0px;
+    }
+    #next-btn{
+        right: 0px;
+    }   
+}
+#next-btn::after,
+#prev-btn::after {
+  font-size: 20px;
+ 
+}
+
+@media(max-width:600px){
+    #next-btn::after,
+#prev-btn::after {
+  font-size: 15px;
+}
+}
+@media(max-width:500px){
+    #next-btn::after,
+#prev-btn::after {
+  font-size: 12px;
+}
+}
+@media(max-width:400px){
+    #next-btn::after,
+#prev-btn::after {
+  font-size: 9px;
+}
+}
+@media(max-width:300px){
+    #next-btn::after,
+#prev-btn::after {
+  font-size: 5px;
+}
+}
+.swiper{
+    height: 100vh;
+}
+.slide{
+    width: 100%;
+    color: white;
+    position: relative;
+    font-size: 1.8rem;
+  
+}
+#slide_1{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgba(20, 20, 20,0.6) 40%, rgba(83,100,141,0) 50% ),url("photos/zack-snyders-justicejpg.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+#slide_2{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgba(20, 20, 20,0.6) 40%, rgba(83,100,141,0) 50% ),url("photos/shazam.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#slide_3{
+    height: 100vh;
+    width:100%;
+    background-image:linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgb(20 20 20) 42%, rgba(83,100,141,0) 65% ),url("photos/maxresdefault.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#slide_4{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgba(20, 20, 20,0.6) 40%, rgba(83,100,141,0) 50% ),url("photos/logon.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#slide_5{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgba(20, 20, 20,0.6) 40%, rgba(83,100,141,0) 50% ),url("photos/spiderman-nwh.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#slide_6{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgba(20, 20, 20,0.6) 40%, rgba(83,100,141,0) 50% ),url("photos/venom-tom-hardy-4k-8k-wallpaper-preview.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+#slide_7{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(  90deg, rgba(0, 0, 0,1) 0%,rgba(20, 20, 20,0.6) 40%, rgba(83,100,141,0) 50% ),url("photos/Hawkeye.jpg"); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.slide:hover #next-btn::after,
+.slide:hover #prev-btn::after {
+display: block;
+}
+
+
+
+.slide{
+    display: flex;
+    align-items: center;
+}
+.text-data{
+    height: 80%;
+    margin-left: 5%;
+    /* background: red; */
+}
+.name_of_cine{
+    background:linear-gradient(270deg, rgba(11, 1, 2, 0) 0%, rgb(53 134 255 / 59%) 100%);
+    border-left: 6px solid #3586ff;
+    width: 20%;
+    padding: 5px 1.7rem;
+    font-size: 2rem;
+   margin-top: 20px;
+}
+ .swiper-slide-active .slide .text-data .name_of_cine{
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+     animation-duration: 1s;
+}
+/* .swiper-slide-active .slide .text-data .name_of_cine{
+    --animate-duration: 0.5s;
+  } */
+.name_of_movie{
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+.swiper-slide-active .slide .text-data .name_of_movie{
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+     animation-duration: 2s;
+}
+/* .swiper-slide-active .slide .text-data .name_of_movie{
+    --animate-duration: 1s;
+  } */
+.movie-info{
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+.swiper-slide-active .slide .text-data .movie-info{
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+     animation-duration: 1s;
+}
+.stars{
+    color: #3586ff;
+    margin-right: 20px;
+}
+.imdb-rating{
+    margin-right: 20px;
+    font-size: 1.1rem;
+}
+.move-length{
+    font-size: 1.2rem;
+}
+.about-movie{
+    width: 30%;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.swiper-slide-active .slide .text-data .about-movie{
+    animation: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+     animation-duration: 1s;
+}
+.info-movie-cast{
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.one{
+    display: flex;
+}
+.play-trailer{
+    padding: 10px 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    background: #3586ff;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    width: 150px;
+    margin-top: 40px;
+    position: relative;
+}
+.play-trailer::after{
+    position: absolute;
+    content: '';
+    background: #ffffff1a;
+    width: 0%;
+    height: 100%;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    transition: all 0.5s ease;
+}
+.play-trailer:hover::after{
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+.play-trailer p{
+    text-decoration: none;
+    margin-left: 4px;
+    color: white;
+    font-weight: bold;
+}
+.swiper-slide-active .slide .text-data .play-trailer{
+    animation: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+     animation-duration: 1s;
+}
+@media(max-width:850px){
+    .text-data{
+        height: 83%;
+    }
+    .name_of_cine{
+        width: 20%;
+        font-size: 1.5rem;
+    }
+    .name_of_movie{
+        font-size: 2rem;
+    }
+    .movie-info{
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    .imdb-rating{
+        margin-right: 20px;
+        font-size: 1rem;
+    }
+    .move-length{
+        font-size: 1.1rem;
+    }
+    .about-movie{
+        width: 40%;
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+
+    .info-movie-cast{
+        margin-top: 20px;
+        font-size: 0.9rem;
+    }
+    .play-trailer{
+        font-size: 1rem;
+        width: 130px;
+    }
+ 
+   
+}
+@media(max-width:570px){
+    .text-data{
+        height: 83%;
+    }
+    .name_of_cine{
+        width: 20%;
+        font-size: 1rem;
+    }
+    .name_of_movie{
+        font-size: 1.3rem;
+    }
+    .movie-info{
+        font-size: 0.9rem;
+        margin-top: 20px;
+    }
+
+    .imdb-rating{
+        margin-right: 20px;
+        font-size: 0.9rem;
+    }
+    .move-length{
+        font-size: 1rem;
+    }
+    .about-movie{
+        width: 60%;
+        margin-top: 20px;
+        font-size: 0.5rem;
+    }
+
+    .info-movie-cast{
+        margin-top: 20px;
+        font-size: 0.7rem;
+    }
+    .play-trailer{
+        font-size: 0.8rem;
+        width: 100px;
+    }
+ 
+   
+}
+@media(max-width:370px){
+    .text-data{
+        height: 83%;
+    }
+    .name_of_cine{
+        width: 20%;
+        font-size: 0.7rem;
+    }
+    .name_of_movie{
+        font-size: 0.9rem;
+    }
+    .movie-info{
+        font-size: 0.7rem;
+        margin-top: 20px;
+    }
+
+    .imdb-rating{
+        margin-right: 20px;
+        font-size: 0.7rem;
+    }
+    .move-length{
+        font-size: 0.8rem;
+    }
+    .about-movie{
+        width: 60%;
+        margin-top: 20px;
+        font-size: 0.4rem;
+    }
+
+    .info-movie-cast{
+        margin-top: 20px;
+        font-size: 0.6rem;
+    }
+    .play-trailer{
+        font-size: 0.6rem;
+        width: 80px;
+    }
+ 
+   
+}
+
+
+/* Top movies  */
+.top_movies{
+    font-size: 1.5rem;
+    color: white;
+    margin: 4% 2% 2%;
+
+}
+
+  body {
+            background: #141214;
+        }
+
+        #swiper {
+            width: 96%;
+            height: 170px;
+        }
+
+        #swiper-slide{
+            position: relative;
+            transition: all 1s ease;
+            overflow: hidden;
+        }
+        #swiper-slide::before{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            transition: all 1s ease;
+        }
+        #swiper-slide::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0%;
+            background: #3586ff;
+            transition: all 1s ease;
+        }
+        #swiper-slide:hover::after{
+height: 100%;
+z-index: 1;
+        }
+        #swiper-slide:hover::before{
+width: 100%;
+z-index: 1;
+        }
+        .content-about-movie {
+            position: absolute;
+            height: 100%;
+            top: 0;
+            left: 0;
+            padding: 0 15px;
+            width: auto;
+            z-index: 1;
+
+        }
+
+        .movie-name-about {
+            margin-top: 25px;
+            color: #3586ff;
+            font-size: 0.8rem;
+            font-weight: bold;
+            z-index: 1;
+            transition: all 1s ease;
+        }
+        #swiper-slide:hover .movie-name-about{
+            color: white;
+        }
+        .time_about {
+            color: #3586ff;
+            font-weight: bold;
+    font-size: 0.9rem;
+    margin: 6px auto;
+    z-index: 1;
+    transition: all 1s ease;
+        }
+        #swiper-slide:hover .time_about{
+            color: white;
+        }
+        .playtrailer{
+            padding: 9px 0.3rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    background: #3586ff;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+  .playtrailer::after{
+    position: absolute;
+    content: '';
+    background: #ffffff1a;
+    width: 0%;
+    height: 100%;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    transition: all 0.5s ease;
+}
+.playtrailer:hover::after{
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+.playtrailer p{
+    text-decoration: none;
+    margin-left: 4px;
+    color: white;
+    font-weight: bold;
+}
+.three_options{
+    position: absolute;
+    font-size: 1rem;
+    right: 3%;
+    top: -100%;
+    transition: all 1s ease;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    background: white;
+    padding: 7px;
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+.circle a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 1s ease;
+}
+.circle a i{
+    color: #3586ff;
+    transition: all 1s ease;
+}
+#swiper-slide:hover .three_options{
+top: 10%;
+z-index: 1;
+}
+.circle:hover{
+    background: #3586ff;
+}
+.circle:hover a i{
+    color: white;
+}
+#swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 1s ease-in-out;
+        }
+#swiper-slide:hover img{
+    transform: scale(1.2);
+    z-index: -1;
+}
+        #swiper-button-next:after,
+        #swiper-button-prev:after {
+            font-size: 1.5rem;
+            background: #000000b0;
+            padding: 5px 0.5rem;
+            color: white;
+        }
+
+
+/* **************** */
+
+
+
+/* parallax top movie  */
+#parallax{
+    background: linear-gradient( rgb(0 0 0 / 43%),rgb(0 0 0 / 46%) ), url("photos/avengers-infinity-war.jpg") center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 100px 0;
+    height: 100%;
+    position: relative;
+}
+.parallax_inner{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parallax_inner img{
+   width: 40%;
+   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+/* Slider  */
+
+.text-data-p{
+width: 40%;
+}
+.name_of_cine-p{
+background: linear-gradient(270deg, rgba(11, 1, 2, 0) 0%, rgb(53 134 255 / 59%) 100%);
+border-left: 6px solid #3586ff;
+width: 20%;
+padding: 5px 1.7rem;
+font-size: 1rem;
+}
+
+.name_of_movie-p{
+margin-top: 10px;
+font-size: 1.5rem;
+}
+
+.movie-info-p{
+display: flex;
+align-items: center;
+font-size: 0.5rem;
+margin-top: 10px;
+}
+
+.stars-p{
+color: #3586ff;
+margin-right: 20px;
+}
+.imdb-rating-p{
+margin-right: 20px;
+font-size: 0.8rem;
+}
+.move-length-p{
+font-size: 0.8rem;
+}
+.about-movie-p{
+margin-top: 10px;
+width: 80%;
+font-size: 0.8rem;
+}
+.info-movie-cast-p{
+margin-top: 10px;
+font-size: 0.7rem;
+}
+.one-p{
+display: flex;
+}
+.play-trailer-p{
+padding: 10px .7rem;
+display: flex;
+align-items: center;
+font-size: 1rem;
+background: #3586ff;
+font-weight: bold;
+color: white;
+text-decoration: none;
+width: 150px;
+margin-top: 20px;
+position: relative;
+}
+.play-trailer-p::after{
+position: absolute;
+content: '';
+background: #ffffff1a;
+width: 0%;
+height: 100%;
+left: 50%;
+right: 50%;
+top: 0;
+transition: all 0.5s ease;
+}
+.play-trailer-p:hover::after{
+left: 0;
+right: 0;
+width: 100%;
+}
+.play-trailer-p p{
+text-decoration: none;
+margin-left: 4px;
+color: white;
+font-weight: bold;
+}
+@media(max-width:950px){
+.text-data-p{
+width: 50%;
+}
+.name_of_movie-p{
+font-size: 0.6rem;
+}
+.movie-info-p{
+font-size: 0.6rem;
+}
+
+.imdb-rating-p{
+font-size: 0.4rem;
+}
+.move-length-p{
+font-size: 0.4rem;
+}
+.about-movie-p{
+font-size: 0.4rem;
+}
+
+.info-movie-cast-p{
+font-size: 0.6rem;
+}
+.play-trailer-p{
+font-size: 0.7rem;
+}
+
+
+}
+@media(max-width:570px){
+.text-data-p{
+width: 55%;
+}
+.name_of_cine-p{
+font-size: 0.4rem;
+}
+.name_of_movie-p{
+font-size: 0.5rem;
+}
+.movie-info-p{
+font-size: 0.4rem;
+}
+
+.imdb-rating-p{
+font-size: 0.3rem;
+}
+.move-length-p{
+font-size: 0.3rem;
+}
+.about-movie-p{
+font-size: 0.4rem;
+}
+
+.info-movie-cast-p{
+font-size: 0.4rem;
+}
+.play-trailer-p{
+font-size: 0.5rem;
+}
+
+
+}
+@media(max-width:370px){
+#parallax{
+padding: 50px 0;
+}
+.parallax_inner img{
+width: 45%;
+}
+.name_of_cine-p{
+font-size: 0.2rem;
+}
+.name_of_movie-p{
+font-size: 0.3rem;
+}
+.movie-info-p{
+font-size: 0.2rem;
+}
+
+.imdb-rating-p{
+font-size: 0.2rem;
+}
+.move-length-p{
+font-size: 0.2rem;
+}
+.about-movie-p{
+font-size: 0.2rem;
+}
+
+.info-movie-cast-p{
+font-size: 0.2rem;
+}
+.play-trailer-p{
+font-size: 0.4rem;
+width: 80px;
+}
+
+}
+
+
+
+.most-rated{
+    padding: 20px;
+    margin: 75px auto;
+}
+.most-rated h2{
+    text-align: center;
+    color: #3586ff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.out-block{
+    margin: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.in-block{
+    background: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 310px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    margin: 10px;
+}
+
+.in-block:hover{
+    transform: translate(-1px,-7px);
+    background: #3586ff;
+    color: white;
+}
+.in-block img{
+    width: 220px;
+}
+.nameofmovie{
+    margin-top: 5px;
+    font-size: 1.4rem;
+    color: #3586ff;
+    font-weight: bold;
+    transition: all 0.5s ease-in-out;
+}
+.in-block:hover .nameofmovie{
+    color: white;
+}
+.rating-imdb-star-time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imdb-stars{
+    display: flex;
+    font-size: 0.8rem;
+}
+#play-button{
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+.in-block:hover #play-button{
+    border: 3px solid white;
+}
+#starr{
+    transition: all 0.5s ease-in-out;
+}
+.in-block:hover #starr{
+    color: white;
+}
+
+
+
+.each_cinematic_universe{
+    margin: 200px auto;
+}
+.each_cinematic_universe h2{
+    text-align: center;
+    color: #3586ff;
+    font-size: 2.5rem;
+    margin: 10px;
+}
+.container-ecu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;  
+    flex-wrap: wrap;
+}
+.firstcontainer{
+    background: white;
+    text-align: center;
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    height: 310px;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.firstcontainer:hover{
+    transform: translateY(-8px);
+}
+.firstcontainer::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #3586ff;
+    transition: all 0.2s ease-in-out;
+}
+.firstcontainer:hover::after{
+    width: 100%;
+    left: 0;
+    right: 0;
+    transform: none;
+}
+.firstcontainer img{
+    width: 250px;
+}
+#name-ecu{
+    margin-top: 20px;
+}
+.overlay-text{
+    position: absolute;
+    background: #3586ff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    top: 100%;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    height: 100%;
+}
+.firstcontainer:hover .overlay-text{
+    top: 0%;
+}
+#name-ecu-overlay{
+    margin-top: 20px;
+    color: white;
+}
+#rist-overlay{
+    margin: 10px auto;
+}
+#starr-overlay{
+    color: white;
+}
+#play-button-overlay{
+    margin: auto;
+    margin-top: 10px;
+    border: 2px solid white;
+    justify-content: center;
+}
+@media(max-width: 580px){
+    .each_cinematic_universe h2{
+        font-size: 1rem;
+    }
+}
+
+
+.designer{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #3586ff;
+    text-align: center;
+    position: relative;
+}
+.designer .wave{
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("wave.png");
+    background-size: 1000px 100px;
+}
+.designer .wave#wave-1{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWave 4s linear infinite;
+}
+.designer .wave#wave-2{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animateWave_02 4s linear infinite;
+}
+.designer .wave#wave-3{
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWave 3s linear infinite;
+}
+.designer .wave#wave-4{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animateWave_02 3s linear infinite;
+}
+@keyframes animateWave {
+    0%{
+        background-position-x: 1000px;
+    }
+    100%{
+        background-position-x: 0px ;
+    }
+}
+@keyframes animateWave_02
+ {
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 1000px ;
+    }
+}
+.list{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    font-size: 1.2rem;
+}
+.list li{
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.list li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.list li:hover{
+    transform: translateY(-4px);
+}
+.list li::after{
+    position: absolute;
+    content: '';
+    bottom: -2px;
+    width: 0%;
+    right: 100%;
+    height: 2px;
+    background: white;
+    transition: all 0.5s ease;
+}
+.list li:hover::after{
+    width: 100%;
+    right: 0;
+}
+.name{
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        color: white;
+        font-size: 1.2rem;
+}
+.bar{
+    width: 90px;
+    height: 1px;
+    background: white;
+    margin: 4px;
+}
+.social-media-links{
+    margin: 10px;
+}
+.social-media-links a{
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px;
+}
+.social-media-links i{
+    transition: all 0.5s ease-in-out;
+
+}
+.social-media-links i:hover{
+    transform: translateY(-4px);
+}
