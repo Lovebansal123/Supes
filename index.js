@@ -4,7 +4,7 @@ var preload = document.getElementById("loader_container");
 var bodyb = document.getElementById("back_body");
 function myfunction() {
     preload.style.top = "-100%";
-    bodyb.style.overflow="scroll";
+    bodyb.style.overflow="visible";
 
 }
 
