@@ -21,6 +21,7 @@ body{
     left: 0;
     z-index: 10000;
     width: 100%;
+     background: #1d1d1d;
     height: 100vh; 
     animation: animateb 16s ease-in-out infinite;
     background-size: cover;
